@@ -13,7 +13,7 @@
 
 ## Partie 2: Dijskstra - Amusons-nous avec un classsique!
 
-Passons aux choses sérieuses. Pour ce 2e exercice vous expérimenterez avec un des algorithme les plus connus en informatique. Comme beaucoup d'algorithmes, son fonctionnement peu sembler obscur à première vue. Ce n'est qu'en l'implémentant que vous aurez une vue d'ensemble sur son fonctionnement et peut-être alors vous réaliserez que la logique est plutôt simple. C'est d'ailleurs ce qui en fait son efficacité.
+Passons aux choses sérieuses. Pour ce 2e exercice vous expérimenterez avec un des algorithmes les plus connus en informatique. Comme beaucoup d'algorithmes, son fonctionnement peu sembler obscur à première vue. Ce n'est qu'en l'implémentant que vous aurez une vue d'ensemble sur son fonctionnement et peut-être alors vous réaliserez que la logique est plutôt simple. C'est d'ailleurs ce qui en fait son efficacité.
 
 ![Disjktra_photo](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Edsger_Wybe_Dijkstra.jpg/180px-Edsger_Wybe_Dijkstra.jpg)
 
@@ -22,9 +22,12 @@ En 1959, [E. W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) (193
 * Quelles routes dois-je prendre pour arriver le plus vite possible à mon entrevue ce matin?
 * Comment router le plus efficacement entre deux appareils une série de fichiers à travers internet?
 
-Disja proposé un [algorithme](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) qui permet de résoudre le problème du plus court
-chemin. Il permet par exemple de trouver le chemin le plus court entre deux villes en considérant différentes
+Dijsktra a donc proposé un [algorithme](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) qui permet de trouver le plus court chemin entre deux point dans un graphe. Par exemple, il permet de trouver le chemin le plus court entre deux villes en considérant différentes
 villes et le réseau routier qui les lient. On propose dans cet exercice d’implémenter cet algorithme.
+
+![animation_dijkstra](https://upload.wikimedia.org/wikipedia/commons/2/23/Dijkstras_progress_animation.gif)
+> Un exemple de dijsktra en action, dans un contexte ou les distances entre les points sont toujours de "1".
+
 Explication de l’algorithme :
 Soit le réseau routier donné par la Figure 1. Les villes sont données par les nœuds (A-G, E, S). Chaque route
 est représentée par un arc orientée qui donne le sens de circulation et la distance entre les deux villes
