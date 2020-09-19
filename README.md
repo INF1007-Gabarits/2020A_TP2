@@ -42,7 +42,14 @@ voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
      <img src="img/ListePicture.PNG?raw=true"/>
 </p>
-A partir de cette variable, nous voulons que vous calculiez, pour chacun des mots de chaque emails, la probabilité qu'un certains mots soit dans un spam ou dans un ham. Par exemple, la probabilité que le mot 'price' soit dan un spam se calcule comme: <img src="https://render.githubusercontent.com/render/math?math=nombre d'occurence du mots dans les emails de type Spam / nombre totale de mots dans les emails de type spam">.
+A partir de cette variable, nous voulons que vous calculiez, pour chacun des mots du <b>Body</b> de chaque mails, la probabilité qu'un certains mots soit dans un <b>spam</b> ou dans un <b>ham</b>. Par exemple, la probabilité que le mot <img src="https://render.githubusercontent.com/render/math?math=x">. soit dans un <b>spam</b> se calcule ainsi: 
+<p align="center">
+     <img src="img/spamss.PNG?raw=true"/>
+</p>
+De l'autre coté, la probabilité qu'un mot soit dans <b>ham</b> se calcule ainsi:
+<p align="center">
+     <img src="img/hams.PNG?raw=true"/>
+</p>
 ```python
         def effectuerRotation(nombreComplexe, angle_rotation, trouverModule):
 
