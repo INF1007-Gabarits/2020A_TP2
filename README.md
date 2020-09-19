@@ -40,15 +40,19 @@ Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme 
 ```
 voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
-     <img src="img/ListePicture.PNG?raw=true"/>
+     <img src="img/new1.PNG?raw=true"/>
 </p>
-A partir de cette variable, nous voulons que vous calculiez, pour chacun des mots du <b>Body</b> de chaque mails, la probabilité qu'un certains mots soit dans un <b>spam</b> ou dans un <b>ham</b>. Par exemple, la probabilité que le mot <img src="https://render.githubusercontent.com/render/math?math=x">. soit dans un <b>spam</b> se calcule ainsi: 
+A partir de cette variable, nous voulons que vous calculiez, pour chacun des mots du <b>Body</b> de chaque mails, la probabilité qu'un certains mots soit dans un <b>spam</b> ou dans un <b>ham</b>. Par exemple, la probabilité qu'un mot soit dans un <b>spam</b> se calcule ainsi: 
 <p align="center">
      <img src="img/spamss.PNG?raw=true"/>
 </p>
-De l'autre coté, la probabilité qu'un mot soit dans <b>ham</b> se calcule ainsi:
+De l'autre coté, la probabilité qu'un mot soit dans un <b>ham</b> se calcule ainsi:
 <p align="center">
      <img src="img/hams.PNG?raw=true"/>
+</p>
+Finalement ses probabilités seront insérés dans un dictionnaire où l'on distiguera le résultat pour les spams de ceux des hams ainsi:
+<p align="center">
+     <img src="img/new2PNG.PNG?raw=true"/>
 </p>
 ```python
         def effectuerRotation(nombreComplexe, angle_rotation, trouverModule):
