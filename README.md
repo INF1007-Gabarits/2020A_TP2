@@ -61,6 +61,6 @@ voici à quoi la structure de la variable <b>email:</b>
 ```
 Si votre programme a été correctement écrit, vous devriez voire une simulation visuelle du nombre complexe avant et apres rotation:
 <p align="center">
-     <img src="img/complexe.PNG?raw=true"/>
+     <img src="img/ListePicture.PNG?raw=true"/>
 </p>
 
