@@ -25,20 +25,24 @@ Pour ce TP, certaines contraintes sont à respecter:
 ## Exercice 4:
 
 ## Exercice 5:
-Dans cet exercice, vous allez participer à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> systEm). Ce système permet d’étiqueter les e-mails comme <b>spam</b> (non désirés) et <b>ham</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. Il est composé de plusieurs modules qui traitent la classification du spam et du ham. 
+Dans cet exercice, vous allez participer à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails comme <b>spam</b> (non désirés) et <b>ham</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. Il est composé de plusieurs modules qui traitent la classification du spam et du ham. 
 
 Nous n'allons pas nous demandez d'implémenter le système RENEGE mais simplement de créer un vocabulaire qui sera utilisé pour entrainer les algorithmes d'intelligence artificielle de RENEGE. Dans le fichier email.json, vous avez une liste de 1000 emails, avec les atributs suivant:
 - <b>From</b>: le destinataire de l'email.
 - <b>Date</b>: la date de l'email.
-- <b>Body</b>: la liste de mots qui sont contenus dans l'email (excluant les pronoms).
+- <b>Body</b>: la liste des mots qui sont contenus dans l'email (excluant les pronoms).
 - <b>Spam</b>: si la valeur est 'true', l'email est un spam, sinon c'est un Ham.
 
-Le fichier email.json est sous la forme d'une liste de dictionnaire que nous avons sauvegarder dans la variable 'emails' avec la fonction 
+Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme d'une liste de dictionnaire avec la fonction 
 ```python
         with open('email.json') as json_data:
             email = json.load(json_data)
 ```
-voici à quoi la structure de la variable <b>email:</b>
+voici à quoi ressemble la structure de la variable <b>emails:</b>
+<p align="center">
+     <img src="img/ListePicture.PNG?raw=true"/>
+</p>
+A partir de cette variable, nous voulons que vous calculiez, pour chacun des mots de chaque emails, la probabilité qu'un certains mots soit dans un spam ou dans un ham. Par exemple, la probabilité que le mot 'price' soit dan un spam se calcule comme: <img src="https://render.githubusercontent.com/render/math?math=nombre d'occurence du mots dans les emails de type Spam / nombre totale de mots dans les emails de type spam">.
 ```python
         def effectuerRotation(nombreComplexe, angle_rotation, trouverModule):
 
@@ -60,7 +64,5 @@ voici à quoi la structure de la variable <b>email:</b>
             return resultat
 ```
 Si votre programme a été correctement écrit, vous devriez voire une simulation visuelle du nombre complexe avant et apres rotation:
-<p align="center">
-     <img src="img/ListePicture.PNG?raw=true"/>
-</p>
+
 
