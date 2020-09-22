@@ -55,6 +55,7 @@ Finalement ses probabilités seront insérés dans un dictionnaire où l'on dist
      <img src="img/new2PNG.PNG?raw=true"/>
 </p>
 votre résultat final sera injécté dans fichier results.json, avec la fonction
+
 ```python
         with open('results.json', 'w') as fp:
             json.dump(result, fp, indent=4)
