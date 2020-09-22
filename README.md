@@ -40,7 +40,7 @@ Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme 
 ```
 Voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
-     <img src="img/new1.PNG?raw=true"/>
+     <img title="figure 6.1" src="img/new1.PNG?raw=true"/>
 </p>
 Vous devez calculer, pour les mots du <b>Body</b> de chaque mails, la probabilité que le mot soit dans un <b>spam</b> ou dans un <b>ham</b>. Par exemple, la probabilité qu'un mot soit dans un <b>spam</b> se calcule ainsi: 
 <p align="center">
@@ -52,9 +52,9 @@ De l'autre coté, la probabilité qu'un mot soit dans un <b>ham</b> se calcule a
 </p>
 Finalement ses probabilités seront insérés dans un dictionnaire où l'on distiguera le résultat pour les spams de ceux des hams ainsi:
 <p align="center">
-     <img src="img/new2PNG.PNG?raw=true"/>
+     <img title="figure 6.2" src="img/new2PNG.PNG?raw=true"/>
 </p>
-votre résultat final sera injécté dans fichier results.json, avec la fonction
+votre résultat final sera injécté dans fichier results.json, avec la fonction:
 
 ```python
         with open('results.json', 'w') as fp:
