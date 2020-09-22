@@ -38,7 +38,7 @@ Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme 
         with open('email.json') as json_data:
             email = json.load(json_data)
 ```
-voici à quoi ressemble la structure de la variable <b>emails:</b>
+Voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
      <img src="img/new1.PNG?raw=true"/>
 </p>
@@ -60,5 +60,6 @@ votre résultat final sera injécté dans fichier results.json, avec la fonction
         with open('results.json', 'w') as fp:
             json.dump(result, fp, indent=4)
 ```
-Où result contient le dictionnaire en question.
+Où la variable result contient le dictionnaire en question.
 
+Voici à quoi ressemble la fonction à compléter:
