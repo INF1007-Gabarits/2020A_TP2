@@ -59,6 +59,3 @@ votre résultat final sera injécté dans fichier results.json, avec la fonction
         with open('results.json', 'w') as fp:
             json.dump(vocabulary, fp, indent=4)
 ```
-Si votre programme a été correctement écrit, vous devriez voire une simulation visuelle du nombre complexe avant et apres rotation:
-
-
