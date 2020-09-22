@@ -40,7 +40,7 @@ Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme 
 ```
 Voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
-     <img title="figure 6.1" src="img/new1.PNG?raw=true"/>
+     <img alt="figure 6.1" src="img/new1.PNG?raw=true"/>
 </p>
 Vous devez calculer, pour les mots du <b>Body</b> de chaque mails, la probabilité que le mot soit dans un <b>spam</b> ou dans un <b>ham</b>. Par exemple, la probabilité qu'un mot soit dans un <b>spam</b> se calcule ainsi: 
 <p align="center">
