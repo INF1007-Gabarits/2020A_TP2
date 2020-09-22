@@ -59,3 +59,4 @@ votre résultat final sera injécté dans fichier results.json, avec la fonction
         with open('results.json', 'w') as fp:
             json.dump(vocabulary, fp, indent=4)
 ```
+
