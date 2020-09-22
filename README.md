@@ -36,7 +36,7 @@ Vous ne devrez pas implémenter l'entièreté du système, mais simplement crée
 Le fichier email.json à été sauvegardé dans la variable 'emails' sous forme d'une liste de dictionnaire avec la fonction 
 ```python
         with open('email.json') as json_data:
-            email = json.load(json_data)
+            emails = json.load(json_data)
 ```
 Voici à quoi ressemble la structure de la variable <b>emails:</b>
 <p align="center">
