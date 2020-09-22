@@ -21,8 +21,29 @@ Pour ce TP, certaines contraintes sont à respecter:
 
 
 ## Exercice 2:
+Tri : Écrire un programme qui saisit un tableau d’entiers (pas de vérification nécessaire) de taille 10 et le trie. Le tri est fait en trouvant le plus petit élément entre la case 0 et 9 et en inversant ce minimum avec la case 0. Ensuite, il doit trouver le plus petit élément entre la case 1 et 9 et inverser ce minimum avec la case 1 et ainsi de suite. Le programme doit ensuite afficher le tableau trié.
+Exemple d’affichage :
+Entrez dix nombres entiers : 8 4 12 58 3 9 7 8 11 1
+Voici le tableau trie : 1 3 4 7 8 8 9 11 12 58
 
 ## Exercice 3:
+Hauteur de rebond : Écrivez un programme qui détermine la hauteur atteinte par une balle en tenant
+compte de la hauteur initiale et du nombre de rebonds. Les données à demander et à lire du clavier sont
+donc : la hauteur initiale, le nombre de rebonds au bout duquel on souhaite connaître la hauteur de la balle,
+ainsi que le coefficient de rebond. Vous devrez vérifier la validité des données entrées par l’utilisateur
+(hauteur et nombre de rebonds positifs, et coefficient compris entre 0 et 1) et réutilisant la fonction écrite
+à la question précédente.
+Les variables sont les suivantes :
+- hi est la hauteur avant le rebond numéro i, et hi+1 la hauteur après le rebond numéro i.
+- vi est la vitesse de la balle avant le rebond numéro i, et vi+1 est la vitesse après le rebond.
+Les relations entre les variables sont les suivantes :
+-  = 2 ∙  ∙ ℎ , avec g la constante de gravité égale à 9,81 dans notre cas.
+-  = 2 ∙  , avec c le coefficient de rebond.
+- ℎ = 
+
+∙
+Utilisez une structure de répétition pour répéter le calcul autant de fois qu’il y a de rebonds souhaités.
+Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
 
