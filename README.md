@@ -13,18 +13,29 @@ Celui-ci est composé de 5 exercices, pour lesquels vous devez compléter le cod
 ## Consignes à respecter
 
 Tout d'abord, assurez-vous d'avoir téléchargé les fichiers exercices1-5.py que vous devrez compléter.
-Pour ce TP, certaines contraintes sont à respecter:
-- Vous ne pouvez pas importer d'autres librairies que celle qui sont déjà importées dans les fichiers.
+Pour ce TP, vous ne pouvez pas importer d'autres librairies que celle qui sont déjà importées dans les fichiers.
 
 
 ## Exercice 1:
-Tri : Écrire un programme qui saisit un tableau d’entiers (pas de vérification nécessaire) de taille 10 et le trie. Le tri est fait en trouvant le plus petit élément entre la case 0 et 9 et en inversant ce minimum avec la case 0. Ensuite, il doit trouver le plus petit élément entre la case 1 et 9 et inverser ce minimum avec la case 1 et ainsi de suite. Le programme doit ensuite afficher le tableau trié.
-Exemple d’affichage :
-Entrez dix nombres entiers : 8 4 12 58 3 9 7 8 11 1
-Voici le tableau trie : 1 3 4 7 8 8 9 11 12 58
+Tri : Écrire un programme qui saisit un tableau d’entiers (pas de vérification nécessaire) de taille 10 et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
+
+```python
+        def exercice1(tableau):
+            #TODO: trier le tableau
+
+            return tableau
+
+        if __name__ == '__main__':
+            #Voici un exemple de tableau à trier:
+            tableau_a_trier = [2,4,6,4,6,7,8,9,7,5,4,3]
+
+            resultat = exercice1(tableau_a_trier)
+            print(resultat)
+```
+
 
 ## Exercice 2:
-
+Dans cet exercice vous devez vé
 
 ## Exercice 3:
 Hauteur de rebond : Écrivez un programme qui détermine la hauteur atteinte par une balle en tenant
@@ -54,11 +65,13 @@ dans le cercle est pi/4 (le rapport des aires).
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si x2 + y2 < 1 , le point est dans le cercle.
-Il faut donc faire ainsi jusqu'a arriver une précision à 10-3 : 3,141.......
-
-Vous veillerez à afficher votre valeur approchée avec une précision de 3 chiffres après la
+Il faut donc demander et lire du clavier le nombre d’itérations souhaité, puis afficher la valeur approchée
+de pi par cette méthode puis l’écart relatif entre cette valeur approchée et la valeur précise à 10−6 :
+3,141593. Vous veillerez à afficher votre valeur approchée avec une précision de 6 chiffres après la
 virgule.
-Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires.
+Vous devez utiliser les fonctions srand() et rand() pour la génération de nombres aléatoires. Ces fonctions
+exigent d’inclure les fichiers cstdlib et ctime (voir le programme dans la « Question 4 » des « Exercices
+sur les variables (II) » sur Moodle). Écrivez une fonction pour générer un nombre aléatoire entre -1 et 1.
 
 ## Exercice 5:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
