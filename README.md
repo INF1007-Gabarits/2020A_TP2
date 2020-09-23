@@ -82,13 +82,12 @@ dans le cercle est pi/4 (le rapport des aires).
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si x2 + y2 < 1 , le point est dans le cercle.
-Il faut donc demander et lire du clavier le nombre d’itérations souhaité, puis afficher la valeur approchée
-de pi par cette méthode puis l’écart relatif entre cette valeur approchée et la valeur précise à 10−6 :
-3,141593. Vous veillerez à afficher votre valeur approchée avec une précision de 6 chiffres après la
-virgule.
-Vous devez utiliser les fonctions srand() et rand() pour la génération de nombres aléatoires. Ces fonctions
-exigent d’inclure les fichiers cstdlib et ctime (voir le programme dans la « Question 4 » des « Exercices
-sur les variables (II) » sur Moodle). Écrivez une fonction pour générer un nombre aléatoire entre -1 et 1.
+Il faut faire ainsi  jusqu'à qu l’écart relatif entre cette valeur approchée et la valeur précise à 10−3 :
+3,141xxxx. 
+
+Vous veillerez à afficher votre valeur approchée avec une précision de 4 chiffres après la
+virgule, ainsi que le nombre d'itérations que le programme a pris.
+Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
 
 ## Exercice 5:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
