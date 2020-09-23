@@ -60,7 +60,7 @@ compte de la hauteur initiale et du nombre de rebonds. Les données à demander 
 donc : la hauteur initiale, le nombre de rebonds au bout duquel on souhaite connaître la hauteur de la balle,
 ainsi que le coefficient de rebond. 
 Les variables sont les suivantes :
-- <img src="https://render.githubusercontent.com/render/math?math=h_{i})"> est la hauteur avant le rebond numéro i, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1})" la hauteur après le rebond numéro i.
+-<img src="https://render.githubusercontent.com/render/math?math=h_{i}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
 - vi est la vitesse de la balle avant le rebond numéro i, et vi+1 est la vitesse après le rebond.
 Les relations entre les variables sont les suivantes :
 -  = 2 ∙  ∙ ℎ , avec g la constante de gravité égale à 9,81 dans notre cas.
