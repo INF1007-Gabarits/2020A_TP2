@@ -82,13 +82,12 @@ Utilisez une structure de répétition pour calculer le nombre de rebonds necess
 Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
-Approximation de pi
+
 
 Écrivez un programme qui permet de calculer une valeur approchée de pi par la
 méthode de Monte‐Carlo basée sur les probabilités.
-L’idée est la suivante : si on insère un cercle de rayon 1 (ce qui correspond à une aire de pi) dans un carré
-de côté 2 (et donc d’aire 4), la probabilité qu’un point placé aléatoirement dans le carré soit également
-dans le cercle est pi/4 (le rapport des aires).
+L’idée est la suivante : si on insère un cercle de rayon 1 (soit un cerle d'aire égale à <img src="https://render.githubusercontent.com/render/math?math=\pi">) dans un carré
+de côté 2 (et donc d’aire égale à <img src="https://render.githubusercontent.com/render/math?math=4"> ), la probabilité qu’un point placé aléatoirement dans le carré soit également dans le cercle est donc de <img src="https://render.githubusercontent.com/render/math?math=\pi/4"> (le rapport des aires).
 
 <p align="center">
      <img src="img/PiBoard.png?raw=true"/>
@@ -97,8 +96,9 @@ dans le cercle est pi/4 (le rapport des aires).
 
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
-- Si x2 + y2 < 1 , le point est dans le cercle.
-Il faut faire ainsi  jusqu'à qu l’écart relatif entre cette valeur approchée et la valeur précise à 10−3 :
+- Si <img src="https://render.githubusercontent.com/render/math?math=x^2"> + <img src="https://render.githubusercontent.com/render/math?math=y^2"> < <img src="https://render.githubusercontent.com/render/math?math=1"> , le point est dans le cercle.
+- Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant ce ratio continuellement jusqu'à ce que 
+l’écart relatif entre cette valeur approchée et la valeur précise est de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=10^-3"> :
 3,141xxxx. 
 
 Vous veillerez à afficher votre valeur approchée avec une précision de 4 chiffres après la
