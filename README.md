@@ -60,6 +60,9 @@ Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est m
  
 
 ## Exercice 3:
+<p align="center">
+     <img src="img/balle.png?raw=true"/>
+</p>
 Ici vous devez Écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à demander et à lire du clavier: la hauteur initiale, le coefficient de rebond. 
 Les variables sont les suivantes :
 
