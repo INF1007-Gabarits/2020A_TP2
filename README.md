@@ -8,7 +8,7 @@
 ## Objectif
 
 Ce TP poursuit votre apprentissage à l'algorithmie avec le langage de programmation Python.
-Celui-ci est composé de 5 exercices, pour lesquels vous devez compléter le code avec l'indicateur `TODO`.
+Celui-ci est composé de 6 exercices, pour lesquels vous devez compléter le code avec l'indicateur `TODO`.
 
 ## Consignes à respecter
 
