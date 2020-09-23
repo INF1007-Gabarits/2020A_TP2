@@ -8,16 +8,16 @@
 ## Objectif
 
 Ce TP poursuit votre apprentissage à l'algorithmie avec le langage de programmation Python.
-Celui-ci est composé de 6 exercices, pour lesquels vous devez compléter le code avec l'indicateur `TODO`.
+Celui-ci est composé de 5 exercices, pour lesquels vous devez compléter le code avec l'indicateur `TODO`.
 
 ## Consignes à respecter
 
-Tout d'abord, assurez-vous d'avoir téléchargé les fichiers exercices1-5.py que vous devrez compléter.
+Tout d'abord, assurez-vous d'avoir téléchargé les fichiers exercices1-6.py que vous devrez compléter.
 Pour ce TP, vous ne pouvez pas importer d'autres librairies que celle qui sont déjà importées dans les fichiers.
 
 
 ## Exercice 1:
-Tri : Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
+Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
 
 ```python
         def exercice1(tableau):
@@ -90,23 +90,6 @@ virgule, ainsi que le nombre d'itérations que le programme a pris.
 Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
 
 ## Exercice 5:
-Dans cet exercice, vous devez implémenter la multiplication entre deux matrices de tailles quelconque.
-
-Dans un premier temps, vous devez compléter la fonction suivante:
-
-```python
-        def matriceZero(nbLignes, nbColonnes):
-            A = []
-
-            #TODO: Remplir la matrice A de 0, selon les dimensions données
-
-            return A
-```
-
-Dans un second temps, vous devez implémenter la multiplication des matrices ici :
-Attention: il faut s'assurer que les deux matrices peuvent être multipliées
-
-vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.org/wiki/Produit_matriciel)
 
 ```python
         def multiplierMatrices(A, B):
@@ -123,9 +106,14 @@ vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.or
 
 ```
 
-Le programme devra afficher à la fin:
+```python
+        def matriceZero(nbLignes, nbColonnes):
+            A = []
 
+            #TODO: Remplir la matrice A de 0, selon les dimensions données
 
+            return A
+```
 ## Exercice 6:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
 
