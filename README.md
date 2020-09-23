@@ -75,7 +75,7 @@ Les relations entre les variables sont les suivantes :
 
 <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i})^2/2*g"> 
 
-Utilisez une structure de répétition pour calculer le nombre de rebonds necessaire.
+Utilisez une structure de répétition pour calculer le nombre de rebonds necessaire à la balle afin que sa hauteur atteigne 1cm du sol.
 Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
