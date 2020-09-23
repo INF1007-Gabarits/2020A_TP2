@@ -19,6 +19,11 @@ Pour ce TP, vous ne pouvez pas importer d'autres librairies que celle qui sont d
 ## Exercice 1:
 Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
 
+Votre tri devra suivre la logique suivante:
+<p align="center">
+     <img src="img/sort.png?raw=true"/>
+</p>
+
 ```python
         def exercice1(tableau):
             #TODO: trier le tableau
