@@ -42,7 +42,7 @@ Votre tri devra suivre la logique suivante:
 ## Exercice 2:
 
 
-Dans cet exercice, le mot expression désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
+Dans cet exercice, le mot '"expression désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
 Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est égal au nombre de parenthèses fermantes, et si quelque soit la position dans l'expression, le nombre de parenthèses ouvrantes qui précèdent cette position est toujours supérieur ou égal au nombre de parenthèses fermantes qui précèdent.
 
 • "(()())" est une expression bien parenthésée.
@@ -63,7 +63,7 @@ Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est m
 <p align="center">
      <img src="img/balle.png?raw=true"/>
 </p>
-Ici vous devez Écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à demander et à lire du clavier: la hauteur initiale, le coefficient de rebond. 
+Ici vous devez Écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à lire du clavier sont: la hauteur initiale, le coefficient de rebond. 
 Les variables sont les suivantes :
 
 <img src="https://render.githubusercontent.com/render/math?math=h_{i-1}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
@@ -79,12 +79,12 @@ Les relations entre les variables sont les suivantes :
 <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i})^2/2*g"> 
 
 Utilisez une structure de répétition pour calculer le nombre de rebonds necessaire à la balle afin que sa hauteur atteigne 1cm du sol.
-Vous ne devez pas utiliser de tableau.
+Vous ne devez pas utiliser de structure de donnée.
 
 ## Exercice 4:
 
 
-Écrivez un programme qui permet de calculer une valeur approchée de pi par la
+Écrivez un programme qui permet de calculer une valeur approchée de <img src="https://render.githubusercontent.com/render/math?math=\pi"> par la
 méthode de Monte‐Carlo basée sur les probabilités.
 L’idée est la suivante : si on insère un cercle de rayon 1 (soit un cerle d'aire égale à <img src="https://render.githubusercontent.com/render/math?math=\pi">) dans un carré
 de côté 2 (et donc d’aire égale à <img src="https://render.githubusercontent.com/render/math?math=4"> ), la probabilité qu’un point placé aléatoirement dans le carré soit également dans le cercle est donc de <img src="https://render.githubusercontent.com/render/math?math=\pi/4"> (le rapport des aires).
@@ -98,11 +98,9 @@ Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si <img src="https://render.githubusercontent.com/render/math?math=x^2"> + <img src="https://render.githubusercontent.com/render/math?math=y^2"> < <img src="https://render.githubusercontent.com/render/math?math=1"> , le point est dans le cercle.
 - Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant ce ratio continuellement jusqu'à ce que 
-l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=0,001"> :
-3,141xxxx. 
+l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de 0.001. Le résultat de votre estimation sera donc de 3,141xxxx. 
 
-Vous veillerez à afficher votre estimation avec une précision de 4 chiffres après la
-virgule, ainsi que le nombre d'itérations que le programme a effectuer.
+Votre fonction retournera un tuple qui contiendra votre estimation de <img src="https://render.githubusercontent.com/render/math?math=\pi"> et le nombre d'itérations que le programme a effectuer.
 Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
 
 ## Exercice 5:
@@ -120,10 +118,9 @@ Une matrice sera représentée comme une liste de liste, par exemple la liste: [
 
 
 
-2. Dans un second temps, vous devez implémenter la multiplication des matrices ici :
-Attention: il faut s'assurer que les deux matrices peuvent être multipliées
-
-vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.org/wiki/Produit_matriciel)
+2. Dans un second temps, vous devez implémenter la multiplication des matrices.
+Attention: il faut s'assurer que les deux matrices peuvent être multipliées.
+Vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.org/wiki/Produit_matriciel)
 ```python
         def multiplierMatrices(A, B):
 
@@ -175,7 +172,7 @@ Finalement ses probabilités seront insérés dans un dictionnaire où l'on dist
 <p align="center">
      <img title="figure 6.2" src="img/new2PNG.PNG?raw=true"/>
 </p>
-votre résultat final sera injécté dans fichier results.json, avec la fonction:
+Votre résultat final sera injécté dans fichier results.json, avec la fonction:
 
 ```python
         with open('results.json', 'w') as fp:
@@ -199,7 +196,7 @@ Voici à quoi ressemble la fonction à compléter:
                 json.dump(result, fp, indent=4)         
 ```
 
-Vous etes libre de créer de nouvelles structures de données et d'implémenter d'autre fonctions si cela clarifie le code. La fonction createVocabulary() doit avoir un temps d'éxécution acceptable (moin de 15 secondes).
+Vous etes libre d'implémenter d'autre fonctions pour clarifier le code et éviter les répétions. Nous vous reccomendons de réfléchir aux structures de données les plus adaptées pour résoudre ce problème, en effet la fonction createVocabulary() doit avoir un temps d'éxécution acceptable.
 
 
 
