@@ -58,21 +58,19 @@ Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est m
 Ici vous devez Écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à demander et à lire du clavier: la hauteur initiale, le coefficient de rebond. 
 Les variables sont les suivantes :
 
-<img src="https://render.githubusercontent.com/render/math?math=h_{i}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
+<img src="https://render.githubusercontent.com/render/math?math=h_{i-1}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
 
-<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> est la vitesse de la balle avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> est la vitesse après le rebond <img src="https://render.githubusercontent.com/render/math?math=i">.
+<img src="https://render.githubusercontent.com/render/math?math=v_{i-1}"> est la vitesse de la balle avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=v_{i}"> est la vitesse après le rebond <img src="https://render.githubusercontent.com/render/math?math=i">.
 
 Les relations entre les variables sont les suivantes :
 
-<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=$\sqrt{2*g*h_{i}}$">, avec <img src="https://render.githubusercontent.com/render/math?math=g">  la constante de gravité égale à <img src="https://render.githubusercontent.com/render/math?math=9.81"> dans notre cas.
+<img src="https://render.githubusercontent.com/render/math?math=v_{i-1}"> = <img src="https://render.githubusercontent.com/render/math?math=$\sqrt{2*g*h_{i-1}}$">, avec <img src="https://render.githubusercontent.com/render/math?math=g">  la constante de gravité égale à <img src="https://render.githubusercontent.com/render/math?math=9.81"> dans notre cas.
 
-<img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> = <img src="https://render.githubusercontent.com/render/math?math=v_{i}*c"> avec c le coefficient de rebond.
+<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=v_{i-1}*c"> avec c le coefficient de rebond.
 
-<img src="https://render.githubusercontent.com/render/math?math=h_{i++*-11}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i+1})^2/2*g"> 
-- ℎ = 
-
-∙
-Utilisez une structure de répétition pour répéter le calcul autant de fois qu’il y a de rebonds souhaités.
+<img src="https://render.githubusercontent.com/render/math?math=h_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i})^2/2*g"> 
+
+Utilisez une structure de répétition pour calculer le nombre de rebonds necessaire.
 Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
