@@ -98,7 +98,7 @@ Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si <img src="https://render.githubusercontent.com/render/math?math=x^2"> + <img src="https://render.githubusercontent.com/render/math?math=y^2"> < <img src="https://render.githubusercontent.com/render/math?math=1"> , le point est dans le cercle.
 - Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant ce ratio continuellement jusqu'à ce que 
-l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=10^(-3)"> :
+l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=0,001"> :
 3,141xxxx. 
 
 Vous veillerez à afficher votre estimation avec une précision de 4 chiffres après la
@@ -107,6 +107,7 @@ Vous devez utiliser la fonctions random() pour la génération de nombres aléat
 
 ## Exercice 5:
 Dans cet exercice, vous devez implémenter la multiplication entre deux matrices de tailles quelconque.
+Une matrice sera représentée comme une liste de liste, par exemple la liste: [[1,2,3][3,4,5]] constitue une matrice de deux ligne et trois colonnes où [1,2,3] est la premiere ligne.
 
 1. Dans un premier temps, vous devez compléter la fonction suivante:
 
