@@ -75,6 +75,7 @@ Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
 Approximation de pi
+
 Écrivez un programme qui permet de calculer une valeur approchée de pi par la
 méthode de Monte‐Carlo basée sur les probabilités.
 L’idée est la suivante : si on insère un cercle de rayon 1 (ce qui correspond à une aire de pi) dans un carré
