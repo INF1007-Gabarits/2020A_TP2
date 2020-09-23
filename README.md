@@ -18,13 +18,13 @@ Pour ce TP, certaines contraintes sont à respecter:
 
 
 ## Exercice 1:
-
-
-## Exercice 2:
 Tri : Écrire un programme qui saisit un tableau d’entiers (pas de vérification nécessaire) de taille 10 et le trie. Le tri est fait en trouvant le plus petit élément entre la case 0 et 9 et en inversant ce minimum avec la case 0. Ensuite, il doit trouver le plus petit élément entre la case 1 et 9 et inverser ce minimum avec la case 1 et ainsi de suite. Le programme doit ensuite afficher le tableau trié.
 Exemple d’affichage :
 Entrez dix nombres entiers : 8 4 12 58 3 9 7 8 11 1
 Voici le tableau trie : 1 3 4 7 8 8 9 11 12 58
+
+## Exercice 2:
+
 
 ## Exercice 3:
 Hauteur de rebond : Écrivez un programme qui détermine la hauteur atteinte par une balle en tenant
@@ -46,6 +46,21 @@ Utilisez une structure de répétition pour répéter le calcul autant de fois q
 Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
+Approximation de pi : Écrivez un programme qui permet de calculer une valeur approchée de pi par la
+méthode de Monte‐Carlo basée sur les probabilités.
+L’idée est la suivante : si on insère un cercle de rayon 1 (ce qui correspond à une aire de pi) dans un carré
+de côté 2 (et donc d’aire 4), la probabilité qu’un point placé aléatoirement dans le carré soit également
+dans le cercle est pi/4 (le rapport des aires).
+Voici donc ce qu’il faut faire :
+- Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
+- Si x2 + y2 < 1 , le point est dans le cercle.
+Il faut donc demander et lire du clavier le nombre d’itérations souhaité, puis afficher la valeur approchée
+de pi par cette méthode puis l’écart relatif entre cette valeur approchée et la valeur précise à 10−6 :
+3,141593. Vous veillerez à afficher votre valeur approchée avec une précision de 6 chiffres après la
+virgule.
+Vous devez utiliser les fonctions srand() et rand() pour la génération de nombres aléatoires. Ces fonctions
+exigent d’inclure les fichiers cstdlib et ctime (voir le programme dans la « Question 4 » des « Exercices
+sur les variables (II) » sur Moodle). Écrivez une fonction pour générer un nombre aléatoire entre -1 et 1.
 
 ## Exercice 5:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
