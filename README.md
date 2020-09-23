@@ -74,12 +74,18 @@ Utilisez une structure de répétition pour calculer le nombre de rebonds necess
 Vous ne devez pas utiliser de tableau.
 
 ## Exercice 4:
-<img src="img/PiBoard.png?raw=true"/>
-Approximation de pi : Écrivez un programme qui permet de calculer une valeur approchée de pi par la
+Approximation de pi
+Écrivez un programme qui permet de calculer une valeur approchée de pi par la
 méthode de Monte‐Carlo basée sur les probabilités.
 L’idée est la suivante : si on insère un cercle de rayon 1 (ce qui correspond à une aire de pi) dans un carré
 de côté 2 (et donc d’aire 4), la probabilité qu’un point placé aléatoirement dans le carré soit également
 dans le cercle est pi/4 (le rapport des aires).
+
+<p align="center">
+     <img src="img/PiBoard.png?raw=true"/>
+</p>
+
+
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si x2 + y2 < 1 , le point est dans le cercle.
