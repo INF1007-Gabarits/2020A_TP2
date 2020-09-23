@@ -47,7 +47,7 @@ Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est
 • "(()))()" est mal parenthésée car le cinquième caractère est la troisième parenthèse fermante, alors qu'il n'y a que deux parenthèses ouvrantes qui précèdent.
 
 
-Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la meme expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante et suivi d'une parenthèse fermante. Voici un exemple pour illustrer ce que l'on attends:
+Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la meme expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante est suivie d'une parenthèse fermante. Voici un exemple pour illustrer ce que l'on attend:
 <p align="center">
      <img src="img/exo2.png?raw=true"/>
 </p>
