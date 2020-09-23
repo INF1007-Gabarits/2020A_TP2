@@ -127,6 +127,13 @@ vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.or
             return C
 
 ```
+
+L'affichage attendu à la fin du programme est le suivant: 
+<p align="center">
+     <img src="img/matrice.png?raw=true"/>
+</p>
+
+
 ## Exercice 6:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
 
