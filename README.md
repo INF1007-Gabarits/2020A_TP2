@@ -40,13 +40,16 @@ Tri : Écrire un programme qui saisit un tableau d’entiers et le trie. Attenti
 Dans cet exercice, le mot expression désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
 Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est égal au nombre de parenthèses fermantes, et si quelque soit la position dans l'expression, le nombre de parenthèses ouvrantes qui précèdent cette position est toujours supérieur ou égal au nombre de parenthèses fermantes qui précèdent.
 
-• "(()())" est une expression bien parenthésée ;
-• "(()()" est mal parenthésée car il y a 3 parenthèses ouvrantes et 2 parenthèses fermantes seulement ;
+• "(()())" est une expression bien parenthésée.
+
+• "(()()" est mal parenthésée car il y a 3 parenthèses ouvrantes et 2 parenthèses fermantes seulement.
+
 • "(()))()" est mal parenthésée car le cinquième caractère est la troisième parenthèse fermante, alors qu'il n'y a que deux parenthèses ouvrantes qui précèdent.
+
 
 Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la meme expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante et suivi d'une parenthèse fermante. Voici un exemple pour illustrer ce que l'on attends:
 <p align="center">
-     <img src="img/exo2.PNG?raw=true"/>
+     <img src="img/exo2.png?raw=true"/>
 </p>
 
  
