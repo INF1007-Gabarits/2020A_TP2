@@ -141,7 +141,7 @@ Voici à quoi ressemble la fonction à compléter:
                 json.dump(result, fp, indent=4)         
 ```
 
-Vous etes libre de créer de nouvelles structures de données et d'implémenter d'autre fonctions si cela clarifie le code. La fonction createVocabulary() doit avoir un temps d'éxécution acceptable.
+Vous etes libre de créer de nouvelles structures de données et d'implémenter d'autre fonctions si cela clarifie le code. La fonction createVocabulary() doit avoir un temps d'éxécution acceptabl e.
 
 
 
