@@ -68,7 +68,7 @@ Les relations entre les variables sont les suivantes :
 
 <img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> = <img src="https://render.githubusercontent.com/render/math?math=v_{i}*c"> avec c le coefficient de rebond.
 
-<img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i+1})^2/2*g"> 
+<img src="https://render.githubusercontent.com/render/math?math=h_{i++*-11}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i+1})^2/2*g"> 
 - ℎ = 
 
 ∙
