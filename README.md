@@ -98,11 +98,11 @@ Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si <img src="https://render.githubusercontent.com/render/math?math=x^2"> + <img src="https://render.githubusercontent.com/render/math?math=y^2"> < <img src="https://render.githubusercontent.com/render/math?math=1"> , le point est dans le cercle.
 - Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant ce ratio continuellement jusqu'à ce que 
-l’écart relatif entre cette valeur approchée et la valeur précise est de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=10^-3"> :
+l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de <img src="https://render.githubusercontent.com/render/math?math=10^(-3)"> :
 3,141xxxx. 
 
-Vous veillerez à afficher votre valeur approchée avec une précision de 4 chiffres après la
-virgule, ainsi que le nombre d'itérations que le programme a pris.
+Vous veillerez à afficher votre estimation avec une précision de 4 chiffres après la
+virgule, ainsi que le nombre d'itérations que le programme a effectuer.
 Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
 
 ## Exercice 5:
@@ -198,7 +198,7 @@ Voici à quoi ressemble la fonction à compléter:
                 json.dump(result, fp, indent=4)         
 ```
 
-Vous etes libre de créer de nouvelles structures de données et d'implémenter d'autre fonctions si cela clarifie le code. La fonction createVocabulary() doit avoir un temps d'éxécution acceptabl e.
+Vous etes libre de créer de nouvelles structures de données et d'implémenter d'autre fonctions si cela clarifie le code. La fonction createVocabulary() doit avoir un temps d'éxécution acceptable (moin de 15 secondes).
 
 
 
