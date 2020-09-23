@@ -55,13 +55,20 @@ Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est m
  
 
 ## Exercice 3:
-Hauteur de rebond : Écrivez un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à demander et à lire du clavier: la hauteur initiale, le coefficient de rebond. 
+Ici vous devez Écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à demander et à lire du clavier: la hauteur initiale, le coefficient de rebond. 
 Les variables sont les suivantes :
--<img src="https://render.githubusercontent.com/render/math?math=h_{i}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
--<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> est la vitesse de la balle avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> est la vitesse après le rebond <img src="https://render.githubusercontent.com/render/math?math=i">.
+
+<img src="https://render.githubusercontent.com/render/math?math=h_{i}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
+
+<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> est la vitesse de la balle avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> est la vitesse après le rebond <img src="https://render.githubusercontent.com/render/math?math=i">.
+
 Les relations entre les variables sont les suivantes :
--<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=$\sqrt{2*g*h_{i}}$">, avec <img src="https://render.githubusercontent.com/render/math?math=g">  la constante de gravité égale à <img src="https://render.githubusercontent.com/render/math?math=9.81"> dans notre cas.
--<img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> = avec c le coefficient de rebond.
+
+<img src="https://render.githubusercontent.com/render/math?math=v_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=$\sqrt{2*g*h_{i}}$">, avec <img src="https://render.githubusercontent.com/render/math?math=g">  la constante de gravité égale à <img src="https://render.githubusercontent.com/render/math?math=9.81"> dans notre cas.
+
+<img src="https://render.githubusercontent.com/render/math?math=v_{i+1}"> = <img src="https://render.githubusercontent.com/render/math?math=v_{i}*c"> avec c le coefficient de rebond.
+
+<img src="https://render.githubusercontent.com/render/math?math=h_{i+1}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i+1})^2/2*g"> 
 - ℎ = 
 
 ∙
