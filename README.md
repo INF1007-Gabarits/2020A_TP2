@@ -54,8 +54,9 @@ dans le cercle est pi/4 (le rapport des aires).
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si x2 + y2 < 1 , le point est dans le cercle.
-Il faut donc faire ainsi jusqu'a arriver une précision à 10−3 :
-3,142. Vous veillerez à afficher votre valeur approchée avec une précision de 6 chiffres après la
+Il faut donc faire ainsi jusqu'a arriver une précision à 10-3 : 3,141.......
+
+Vous veillerez à afficher votre valeur approchée avec une précision de 3 chiffres après la
 virgule.
 Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires.
 
