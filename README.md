@@ -108,7 +108,7 @@ Vous devez utiliser la fonctions random() pour la génération de nombres aléat
 ## Exercice 5:
 Dans cet exercice, vous devez implémenter la multiplication entre deux matrices de tailles quelconque.
 
-Dans un premier temps, vous devez compléter la fonction suivante:
+1. Dans un premier temps, vous devez compléter la fonction suivante:
 
 ```python
         def matriceZero(nbLignes, nbColonnes):
@@ -117,7 +117,9 @@ Dans un premier temps, vous devez compléter la fonction suivante:
             return A
 ```
 
-Dans un second temps, vous devez implémenter la multiplication des matrices ici :
+
+
+2. Dans un second temps, vous devez implémenter la multiplication des matrices ici :
 Attention: il faut s'assurer que les deux matrices peuvent être multipliées
 
 vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.org/wiki/Produit_matriciel)
