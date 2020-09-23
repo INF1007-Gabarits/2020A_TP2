@@ -42,7 +42,7 @@ Votre tri devra suivre la logique suivante:
 ## Exercice 2:
 
 
-Dans cet exercice, le mot '"expression désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
+Dans cet exercice, le mot "expression" désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
 Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est égal au nombre de parenthèses fermantes, et si quelque soit la position dans l'expression, le nombre de parenthèses ouvrantes qui précèdent cette position est toujours supérieur ou égal au nombre de parenthèses fermantes qui précèdent.
 
 • "(()())" est une expression bien parenthésée.
