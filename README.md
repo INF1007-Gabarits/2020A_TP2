@@ -98,7 +98,21 @@ virgule, ainsi que le nombre d'itérations que le programme a pris.
 Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
 
 ## Exercice 5:
+Dans cet exercice, vous devez implémenter la multiplication entre deux matrices de tailles quelconque.
 
+Dans un premier temps, vous devez compléter la fonction suivante:
+
+```python
+        def matriceZero(nbLignes, nbColonnes):
+            A = []
+            #TODO: Remplir la matrice A de 0, selon les dimensions données
+            return A
+```
+
+Dans un second temps, vous devez implémenter la multiplication des matrices ici :
+Attention: il faut s'assurer que les deux matrices peuvent être multipliées
+
+vous pouvez lire sur la multiplication de matrices [ici](https://fr.wikipedia.org/wiki/Produit_matriciel)
 ```python
         def multiplierMatrices(A, B):
 
@@ -112,15 +126,6 @@ Vous devez utiliser la fonctions random() pour la génération de nombres aléat
 
             return C
 
-```
-
-```python
-        def matriceZero(nbLignes, nbColonnes):
-            A = []
-
-            #TODO: Remplir la matrice A de 0, selon les dimensions données
-
-            return A
 ```
 ## Exercice 6:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
