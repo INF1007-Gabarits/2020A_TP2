@@ -55,14 +55,12 @@ Dans cet exercice l'utilisateur vas entrer une expression, si l'expression est m
  
 
 ## Exercice 3:
-Hauteur de rebond : Écrivez un programme qui détermine la hauteur atteinte par une balle en tenant
+Écrivez un programme qui détermine la hauteur atteinte par une balle en tenant
 compte de la hauteur initiale et du nombre de rebonds. Les données à demander et à lire du clavier sont
 donc : la hauteur initiale, le nombre de rebonds au bout duquel on souhaite connaître la hauteur de la balle,
-ainsi que le coefficient de rebond. Vous devrez vérifier la validité des données entrées par l’utilisateur
-(hauteur et nombre de rebonds positifs, et coefficient compris entre 0 et 1) et réutilisant la fonction écrite
-à la question précédente.
+ainsi que le coefficient de rebond. 
 Les variables sont les suivantes :
-- hi est la hauteur avant le rebond numéro i, et hi+1 la hauteur après le rebond numéro i.
+- <img src="https://render.githubusercontent.com/render/math?math=h_{i})"> est la hauteur avant le rebond numéro i, et <img src="https://render.githubusercontent.com/render/math?math=h_{i+1})" la hauteur après le rebond numéro i.
 - vi est la vitesse de la balle avant le rebond numéro i, et vi+1 est la vitesse après le rebond.
 Les relations entre les variables sont les suivantes :
 -  = 2 ∙  ∙ ℎ , avec g la constante de gravité égale à 9,81 dans notre cas.
@@ -82,12 +80,13 @@ dans le cercle est pi/4 (le rapport des aires).
 Voici donc ce qu’il faut faire :
 - Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si x2 + y2 < 1 , le point est dans le cercle.
-Il faut faire ainsi  jusqu'à qu l’écart relatif entre cette valeur approchée et la valeur précise à 10−3 :
-3,141xxxx. 
-
-Vous veillerez à afficher votre valeur approchée avec une précision de 4 chiffres après la
-virgule, ainsi que le nombre d'itérations que le programme a pris.
-Vous devez utiliser la fonctions random() pour la génération de nombres aléatoires. 
+Il faut donc demander et lire du clavier le nombre d’itérations souhaité, puis afficher la valeur approchée
+de pi par cette méthode puis l’écart relatif entre cette valeur approchée et la valeur précise à 10−6 :
+3,141593. Vous veillerez à afficher votre valeur approchée avec une précision de 6 chiffres après la
+virgule.
+Vous devez utiliser les fonctions srand() et rand() pour la génération de nombres aléatoires. Ces fonctions
+exigent d’inclure les fichiers cstdlib et ctime (voir le programme dans la « Question 4 » des « Exercices
+sur les variables (II) » sur Moodle). Écrivez une fonction pour générer un nombre aléatoire entre -1 et 1.
 
 ## Exercice 5:
 Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
