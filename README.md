@@ -13,8 +13,7 @@ Celui-ci est composé de 5 exercices, pour lesquels vous devez compléter le cod
 ## Consignes à respecter
 
 Tout d'abord, assurez-vous d'avoir téléchargé les fichiers exercices1-5.py que vous devrez compléter.
-Pour ce TP, certaines contraintes sont à respecter:
-- Vous ne pouvez pas importer d'autres librairies que celle qui sont déjà importées dans les fichiers.
+Pour ce TP, vous ne pouvez pas importer d'autres librairies que celle qui sont déjà importées dans les fichiers.
 
 
 ## Exercice 1:
