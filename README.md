@@ -95,9 +95,9 @@ de côté 2 (et donc d’aire égale à <img src="https://render.githubuserconte
 
 
 Voici donc ce qu’il faut faire :
-- Vous allez générer deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
+- Vous allez générer continuellement deux nombres réels aléatoires x et y, tous deux compris entre -1 et 1.
 - Si <img src="https://render.githubusercontent.com/render/math?math=x^2"> + <img src="https://render.githubusercontent.com/render/math?math=y^2"> < <img src="https://render.githubusercontent.com/render/math?math=1"> , le point est dans le cercle.
-- Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant ce ratio continuellement jusqu'à ce que 
+- Vous allez estimer <img src="https://render.githubusercontent.com/render/math?math=\pi"> en calculant le ratio (nombre de points dans le cercle par rapport aux points dans le carré) continuellement jusqu'à ce que 
 l’écart relatif entre votre estimation et la valeur précise soit de l'ordre de 0.001. Le résultat de votre estimation sera donc de 3,141xxxx. 
 
 Votre fonction retournera un tuple qui contiendra votre estimation de <img src="https://render.githubusercontent.com/render/math?math=\pi"> et le nombre d'itérations que le programme a effectuer.
@@ -143,7 +143,7 @@ L'affichage attendu à la fin du programme est le suivant:
 
 
 ## Exercice 6:
-Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des c<b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
+Dans cet exercice, vous allez participé à la conception d'un système de filtrage des spams <b>RENEGE</b> (use<b>R</b> awar<b>E</b> bayesia<b>N</b> filt<b>E</b>rin<b>G</b> syst<b>E</b>m). Ce système permet d’étiqueter les e-mails en déduisant si ce sont des <b>spams</b> (non désirés) ou des <b>hams</b> (messages ok).  Il s’agit essentiellement d’un classificateur bayésien associé à des règles heuristiques. 
 
 Vous ne devrez pas implémenter l'entièreté du système, mais simplement créer un vocabulaire qui sera utilisé pour entrainer les algorithmes d'intelligence artificielle de RENEGE. Dans le fichier email.json, vous avez une liste de 1000 emails, avec les atributs suivant:
 - <b>From</b>: le destinataire de l'email.
@@ -196,7 +196,7 @@ Voici à quoi ressemble la fonction à compléter:
                 json.dump(result, fp, indent=4)         
 ```
 
-Vous etes libre d'implémenter d'autre fonctions pour clarifier le code et éviter les répétions. Nous vous reccomendons de réfléchir aux structures de données les plus adaptées pour résoudre ce problème, en effet la fonction createVocabulary() doit avoir un temps d'éxécution acceptable.
+Vous etes libre d'implémenter d'autre fonctions pour clarifier le code et éviter les répétions. Nous vous reccomendons de réfléchir aux structures de données les plus adaptées pour résoudre ce problème efficacement, en effet la fonction createVocabulary() doit avoir un temps d'éxécution acceptable.
 
 
 
