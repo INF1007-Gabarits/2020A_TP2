@@ -54,7 +54,7 @@ Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est
 
 Dans cet exercice l'utilisateur va entrer une expression et, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la même expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante est suivie d'une parenthèse fermante. Voici un exemple pour illustrer ce qui est attendu:
 <p align="center">
-     <img src="img/exo2.png?raw=true"/>
+     <img src="img/output_parentheses.png?raw=true"/>
 </p>
 
  
