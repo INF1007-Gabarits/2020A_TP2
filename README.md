@@ -17,7 +17,7 @@ Pour ce TP, vous **ne pouvez pas importer d'autres librairies que celle qui sont
 
 
 ## Exercice 1:
-Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri venant d'une librairie, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
+Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri venant d'une librairie, ni la fonction min() et max() et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié. Pas besoin de modifier le main, effectuez le tri sur le tableau passé en paramètre de la fonction exercice1(tableau).
 
 Votre tri devra suivre la logique suivante présentée dans l'image suivante.
 <p align="center">
