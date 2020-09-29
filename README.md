@@ -17,7 +17,7 @@ Pour ce TP, vous ne pouvez pas importer d'autres librairies que celle qui sont d
 
 
 ## Exercice 1:
-Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
+Écrire un programme qui saisit un tableau d’entiers et le trie. Attention, vous ne pouvez pas utiliser de fonction de tri venant d'une librairie, et toutes les manipulations doivent se faire sur un seul tableau. Le programme doit ensuite afficher le tableau trié.
 
 Votre tri devra suivre la logique suivante présentée dans l'image suivante.
 <p align="center">
@@ -42,7 +42,7 @@ Votre tri devra suivre la logique suivante présentée dans l'image suivante.
 ## Exercice 2:
 
 
-Dans cet exercice, le mot "expression" désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes comme par exemple "(()())", "(()()" et "(()))(".
+Dans cet exercice, le mot "expression" désigne une chaîne de caractères ne contenant que des parenthèses ouvrantes et fermantes. Par exemple "(()())", "(()()" et "(()))(".
 Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est égal au nombre de parenthèses fermantes, et si quelque soit la position dans l'expression, le nombre de parenthèses ouvrantes qui précèdent cette position est toujours supérieur ou égal au nombre de parenthèses fermantes qui précèdent.
 
 • "(()())" est une expression bien parenthésée.
@@ -52,7 +52,7 @@ Une expression est bien parenthésée si le nombre de parenthèses ouvrantes est
 • "(()))()" est mal parenthésée car le cinquième caractère est la troisième parenthèse fermante, alors qu'il n'y a que deux parenthèses ouvrantes qui précèdent.
 
 
-Dans cet exercice l'utilisateur va entrer une expression et, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la meme expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante est suivie d'une parenthèse fermante. Voici un exemple pour illustrer ce que l'on attend:
+Dans cet exercice l'utilisateur va entrer une expression et, si l'expression est mal parenthésée, la fonction retourne "Incorrect", sinon elle retourne la même expresion, mais en insérant des '.' à chaque fois qu'une parenthèse ouvrante est suivie d'une parenthèse fermante. Voici un exemple pour illustrer ce qui est attendu:
 <p align="center">
      <img src="img/exo2.png?raw=true"/>
 </p>
@@ -63,7 +63,7 @@ Dans cet exercice l'utilisateur va entrer une expression et, si l'expression est
 <p align="center">
      <img src="img/balle.png?raw=true"/>
 </p>
-Dans cet exercice, vous devez écrire un programme qui détermine le nombre de rebonds effectuer par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à lire du clavier sont : la hauteur initiale, le coefficient de rebond. 
+Dans cet exercice, vous devez écrire un programme qui détermine le nombre de rebonds effectué par la balle avant que la hauteur du rebond soit inferieure à 0.01 mètre. Les données à lire du clavier sont : la hauteur initiale, le coefficient de rebond. 
 Les variables sont les suivantes :
 
 <img src="https://render.githubusercontent.com/render/math?math=h_{i-1}"> est la hauteur avant le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">, et <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> la hauteur après le rebond numéro <img src="https://render.githubusercontent.com/render/math?math=i">.
@@ -79,7 +79,7 @@ Les relations entre les variables sont les suivantes :
 <img src="https://render.githubusercontent.com/render/math?math=h_{i}"> = <img src="https://render.githubusercontent.com/render/math?math=(v_{i})^2/2*g"> 
 
 Utilisez une structure de répétition pour calculer le nombre de rebonds necessaire à la balle afin que sa hauteur atteigne 1 cm du sol.
-Vous ne pouvez pas utiliser de structure de données.
+Vous ne pouvez pas utiliser de structures de données.
 
 ## Exercice 4:
 
@@ -147,7 +147,7 @@ Vous ne devrez pas implémenter l'entièreté du système, mais simplement crée
 - <b>Body</b>: la liste des mots qui sont contenus dans le courriel.
 - <b>Spam</b>: si la valeur est 'true', le courriel est un Spam, sinon c'est un Ham.
 
-Le fichier `email.json` à été sauvegardé dans la variable 'emails' sous forme d'une liste de dictionnaire avec la fonction 
+Le fichier `email.json` à été sauvegardé dans la variable 'emails' sous forme d'une liste de dictionnaires avec la fonction 
 ```python
         with open('email.json') as json_data:
             emails = json.load(json_data)
