@@ -166,7 +166,7 @@ Vous devez calculer, pour les mots du <b>Body</b> de chaque courriel, la probabi
 </p>
 Finalement, ces probabilités seront insérés dans un dictionnaire où l'on distiguera le résultat pour les spams de ceux des hams ainsi :
 <p align="center">
-     <img title="figure 6.2" src="img/results_spam.png?raw=true"/>
+     <img title="figure 6.2" src="img/result_spam.png?raw=true"/>
 </p>
 
 Vous n'avez pas besoin d'arrondir le résultat.
