@@ -168,6 +168,7 @@ Finalement, ces probabilités seront insérés dans un dictionnaire où l'on dis
 <p align="center">
      <img title="figure 6.2" src="img/result_spam.png?raw=true"/>
 </p>
+> Le contenu du dictionnaire devrait ressembler en partie à ça.
 
 Vous n'avez pas besoin d'arrondir le résultat.
 Votre résultat final sera injécté dans fichier `results.json`, avec la fonction :
