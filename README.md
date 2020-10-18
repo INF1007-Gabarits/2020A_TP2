@@ -3,7 +3,7 @@
 # TP2
 
 <!--- Changer la date de remise en modifiant le URL--->
-#### :alarm_clock: [Date de remise le dimanche 11 octobre 2020 à 23h59](https://www.timeanddate.com/countdown/generic?iso=20200927T2359&p0=165&msg=Remise&font=cursive&csz=1#)
+#### :alarm_clock: [Date de remise le Dimanche 11 octobre 2020 à 23h59](https://www.timeanddate.com/countdown/generic?iso=20200927T2359&p0=165&msg=Remise&font=cursive&csz=1#)
 
 ## Objectif
 
@@ -168,7 +168,6 @@ Finalement, ces probabilités seront insérés dans un dictionnaire où l'on dis
 <p align="center">
      <img title="figure 6.2" src="img/result_spam.png?raw=true"/>
 </p>
-> Le contenu du dictionnaire devrait ressembler en partie à ça.
 
 Vous n'avez pas besoin d'arrondir le résultat.
 Votre résultat final sera injécté dans fichier `results.json`, avec la fonction :
