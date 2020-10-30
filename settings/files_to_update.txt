@@ -3,6 +3,7 @@
 README.md
 test_assignment.py
 settings/files_to_update.txt
+settings/test_associations.json
 settings/variables.txt
 img/output_parentheses.png
 img/result_spam.png
