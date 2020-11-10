@@ -1,6 +1,5 @@
 import math
 import numpy as np
-import unittest
 import os
 import sys
 import json
@@ -9,22 +8,22 @@ from exercice1 import exercice1 as ex1
 from exercice2 import exercice2 as ex2
 from exercice3 import exercice3 as ex3
 import exercice4 as ex4
-from exercice5 import multiplierMatrices as ex5
-from exercice6 import createVocabulary as ex6
+from exercice5 import multiplierMatrices as multiplierMatrice
+from exercice6 import createVocabulary as creerVocabulaire
 import _thread
 import threading
 import unittest
 
 
-## Timeout
-def exitFunction():
+# Timeout
+def exit_function():
     _thread.interrupt_main()
 
 
 def timeout(s):
     def outer(fn):
         def inner(*args, **kwargs):
-            timer = threading.Timer(s, exitFunction)
+            timer = threading.Timer(s, exit_function)
             timer.start()
             try:
                 result = fn(*args, **kwargs)
@@ -119,17 +118,14 @@ class TestExercice4(unittest.TestCase):
     counter = 1
 
     @timeout(1)
-    def executerTest(self, fonction, nomFonctionTestee):
+    def executerTest(self, fonction, nom_fonction):
         try:
             fonction()
         except KeyboardInterrupt:
             self.fail(
-                f'L\'appel fonction {nomFonctionTestee} ne se termine pas --> Vérifiez vos boucles')
+                f'L\'appel fonction {nom_fonction} ne se termine pas --> Verifiez vos boucles')
         except AssertionError as e:
             raise e
-        except:
-            self.fail(
-                f'Une exception a été levée lors de l\'appel fonction {nomFonctionTestee}. Revérifier votre code.')
 
     def mockedRandom(self):
         if self.counter <= self.IN_CIRCLE:
@@ -144,7 +140,7 @@ class TestExercice4(unittest.TestCase):
             self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
 
     def test_pie_is_well_aproximed(self):
-        self.executerTest(self.executer_pi, self.executer_pi)
+        self.executerTest(self.executer_pi, "Approximer Pi")
 
 
 class TestExercice5(unittest.TestCase):
@@ -153,38 +149,36 @@ class TestExercice5(unittest.TestCase):
     C = ([[1], [6]])
 
     def test_multyply_matrice_with_uncompatible_size_1(self):
-        isEqual = np.array_equal(ex5(self.A, self.B), [[0.0, 0.0], [0.0, 0.0]])
+        isEqual = np.array_equal(multiplierMatrice(self.A, self.B), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
     def test_multyply_matrice_with_uncompatible_size_2(self):
-        isEqual = np.array_equal(ex5(self.C, self.A), [[0.0, 0.0], [0.0, 0.0]])
+        isEqual = np.array_equal(multiplierMatrice(self.C, self.A), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
     def test_multyply_matrice_with_compatible_size_1(self):
-        isEqual = np.array_equal(ex5(self.B, self.A), [[3, 12], [7, 32], [11, 46]])
+        isEqual = np.array_equal(multiplierMatrice(self.B, self.A), [[3, 12], [7, 32], [11, 46]])
         self.assertTrue(isEqual)
 
     def test_multyply_matrice_with_compatible_size_2(self):
-        isEqual = np.array_equal(ex5(self.A, self.C), [[13], [31]])
+        isEqual = np.array_equal(multiplierMatrice(self.A, self.C), [[13], [31]])
         self.assertTrue(isEqual)
 
 
 class TestExercice6(unittest.TestCase):
 
     @timeout(1)
-    def executerTest(self, fonction, nomFonctionTestee):
+    def executerTest(self, fonction, nom_fonction):
         try:
             fonction()
         except KeyboardInterrupt:
             self.fail(
-                f'L\'appel fonction {nomFonctionTestee} ne se termine pas --> Vérifiez vos boucles')
+                f'L\'appel fonction {nom_fonction} ne se termine pas --> Verifiez vos boucles')
         except AssertionError as e:
             raise e
-        except:
-            self.fail(
-                f'Une exception a été levée lors de l\'appel fonction {nomFonctionTestee}. Revérifier votre code.')
 
-    def create_new_vocab(self):
+    @staticmethod
+    def create_new_vocab():
         new_mails = [{
             "mail": {
                 "From": "GP@paris.com",
@@ -253,7 +247,6 @@ class TestExercice6(unittest.TestCase):
         with open('mails.json', 'w') as fp:
             json.dump(new_mails, fp, indent=4)
 
-
     def setUp(self):
         self.create_new_vocab()
         self.spam_ham_words = ["portfolio", "new", "user", "joint"]
@@ -262,7 +255,7 @@ class TestExercice6(unittest.TestCase):
                            "electromagnet": 0.07692307692307693}
 
         self.ham_words = {"practition": 0.0625, "marino": 0.0625}
-        self.executerTest(ex6, ex6)
+        self.executerTest(creerVocabulaire, "Creer Vocabulaire")
         self.emails = {}
         with open("results.json") as json_data:
             self.emails = json.load(json_data)
@@ -271,11 +264,10 @@ class TestExercice6(unittest.TestCase):
         self.spam_dict = {}
         self.ham_dict = {}
         for element in self.principal_keys:
-            if ('spam' in element.lower()):
+            if 'spam' in element.lower():
                 self.spam_dict = self.emails[element]
-            if ('ham' in element.lower()):
+            if 'ham' in element.lower():
                 self.ham_dict = self.emails[element]
-
 
     def principal_keys_are_in_the_dict(self):
         ham_key = False
@@ -287,7 +279,6 @@ class TestExercice6(unittest.TestCase):
                 spam_key = True
         return ham_key and spam_key
 
-
     def spam_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
             return False
@@ -296,7 +287,6 @@ class TestExercice6(unittest.TestCase):
             if element not in spam_keys:
                 return False
         return True
-
 
     def ham_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
@@ -307,18 +297,14 @@ class TestExercice6(unittest.TestCase):
                 return False
         return True
 
-
     def test_principal_keys_are_in_dict(self):
         self.assertTrue(self.principal_keys_are_in_the_dict())
-
 
     def test_spam_keys_are_in_dict(self):
         self.assertTrue(self.spam_keys_are_in_dict())
 
-
     def test_ham_keys_are_in_dict(self):
         self.assertTrue(self.ham_keys_are_in_dict())
-
 
     def test_spam_keys_should_not_be_in_ham_dict(self):
         if not self.principal_keys_are_in_the_dict():
@@ -332,7 +318,6 @@ class TestExercice6(unittest.TestCase):
                 key_give_0_prop = self.ham_dict[element] == 0
             self.assertTrue(key_give_0_prop or key_not_exist)
 
-
     def test_ham_keys_should_not_be_in_spam_dict(self):
         if not self.principal_keys_are_in_the_dict():
             self.assertTrue(False)
@@ -345,14 +330,12 @@ class TestExercice6(unittest.TestCase):
                 key_give_0_prop = self.spam_dict[element] == 0
             self.assertTrue(key_give_0_prop or key_not_exist)
 
-
     def test_spam_prob_are_correct(self):
         if not self.spam_keys_are_in_dict():
             self.assertTrue(False)
             return
         for element in self.spam_words:
             self.assertAlmostEqual(self.spam_dict[element], self.spam_words[element], places=9)
-
 
     def test_ham_prob_are_correct(self):
         if not self.ham_keys_are_in_dict():
