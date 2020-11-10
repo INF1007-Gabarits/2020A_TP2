@@ -1,18 +1,40 @@
 import math
-
 import numpy as np
 import unittest
 import os
 import sys
 import json
 from mock import patch
-
 from exercice1 import exercice1 as ex1
 from exercice2 import exercice2 as ex2
 from exercice3 import exercice3 as ex3
 import exercice4 as ex4
 from exercice5 import multiplierMatrices as ex5
 from exercice6 import createVocabulary as ex6
+import _thread
+import threading
+import unittest
+
+
+## Timeout
+def exitFunction():
+    _thread.interrupt_main()
+
+
+def timeout(s):
+    def outer(fn):
+        def inner(*args, **kwargs):
+            timer = threading.Timer(s, exitFunction)
+            timer.start()
+            try:
+                result = fn(*args, **kwargs)
+            finally:
+                timer.cancel()
+            return result
+
+        return inner
+
+    return outer
 
 
 class TestExercice1(unittest.TestCase):
@@ -102,9 +124,20 @@ class TestExercice4(unittest.TestCase):
         self.counter += 1
         return value
 
+    @timeout(1)  # Termine le programme quand l'execution dure plus d'une seconde
     def test_pie_is_well_aproximed(self):
-        with patch('__main__.ex4.random', self.mockedRandom):
-            self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
+        try:
+            with patch('__main__.ex4.random', self.mockedRandom):
+                self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
+
+        except KeyboardInterrupt:
+            self.fail(
+                f'L\'appel fonction ne se termine pas --> Vérifiez vos boucles')
+        except AssertionError as e:
+            raise e
+        except:
+            self.fail(
+                f'Une exception a été levée lors de l\'appel fonction . Revérifier votre code.')
 
 
 class TestExercice5(unittest.TestCase):
