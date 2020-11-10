@@ -42,6 +42,8 @@ class TestExercice1(unittest.TestCase):
 
     def test_tri_dix_elements(self):
         array = np.random.randint(-100, 100, 10)
+        print(ex1(array))
+        print(np.sort(array))
         isEqual = np.array_equal(np.sort(array), ex1(array))
         self.assertTrue(isEqual)
 
@@ -116,6 +118,19 @@ class TestExercice4(unittest.TestCase):
     ITERATIONS = 452 * 2
     counter = 1
 
+    @timeout(1)
+    def executerTest(self, fonction, nomFonctionTestee):
+        try:
+            fonction()
+        except KeyboardInterrupt:
+            self.fail(
+                f'L\'appel fonction {nomFonctionTestee} ne se termine pas --> Vérifiez vos boucles')
+        except AssertionError as e:
+            raise e
+        except:
+            self.fail(
+                f'Une exception a été levée lors de l\'appel fonction {nomFonctionTestee}. Revérifier votre code.')
+
     def mockedRandom(self):
         if self.counter <= self.IN_CIRCLE:
             value = 0.5  # inside circle
@@ -124,20 +139,12 @@ class TestExercice4(unittest.TestCase):
         self.counter += 1
         return value
 
-    @timeout(1)  # Termine le programme quand l'execution dure plus d'une seconde
-    def test_pie_is_well_aproximed(self):
-        try:
-            with patch('__main__.ex4.random', self.mockedRandom):
-                self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
+    def executer_pi(self):
+        with patch('__main__.ex4.random', self.mockedRandom):
+            self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
 
-        except KeyboardInterrupt:
-            self.fail(
-                f'L\'appel fonction ne se termine pas --> Vérifiez vos boucles')
-        except AssertionError as e:
-            raise e
-        except:
-            self.fail(
-                f'Une exception a été levée lors de l\'appel fonction . Revérifier votre code.')
+    def test_pie_is_well_aproximed(self):
+        self.executerTest(self.executer_pi, self.executer_pi)
 
 
 class TestExercice5(unittest.TestCase):
@@ -145,36 +152,117 @@ class TestExercice5(unittest.TestCase):
     B = ([[1, 2], [1, 6], [3, 8]])
     C = ([[1], [6]])
 
-    def test_multiyply_matrix_with_uncompatible_size_1(self):
+    def test_multyply_matrice_with_uncompatible_size_1(self):
         isEqual = np.array_equal(ex5(self.A, self.B), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
-    def test_multiyply_matrix_with_uncompatible_size_2(self):
+    def test_multyply_matrice_with_uncompatible_size_2(self):
         isEqual = np.array_equal(ex5(self.C, self.A), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
-    def test_multiyply_matrix_with_compatible_size_1(self):
+    def test_multyply_matrice_with_compatible_size_1(self):
         isEqual = np.array_equal(ex5(self.B, self.A), [[3, 12], [7, 32], [11, 46]])
         self.assertTrue(isEqual)
 
-    def test_multiyply_matrix_with_compatible_size_2(self):
+    def test_multyply_matrice_with_compatible_size_2(self):
         isEqual = np.array_equal(ex5(self.A, self.C), [[13], [31]])
         self.assertTrue(isEqual)
 
 
 class TestExercice6(unittest.TestCase):
 
+    @timeout(1)
+    def executerTest(self, fonction, nomFonctionTestee):
+        try:
+            fonction()
+        except KeyboardInterrupt:
+            self.fail(
+                f'L\'appel fonction {nomFonctionTestee} ne se termine pas --> Vérifiez vos boucles')
+        except AssertionError as e:
+            raise e
+        except:
+            self.fail(
+                f'Une exception a été levée lors de l\'appel fonction {nomFonctionTestee}. Revérifier votre code.')
+
+    def create_new_vocab(self):
+        new_mails = [{
+            "mail": {
+                "From": "GP@paris.com",
+                "Date": "2004-08-15",
+                "Body": [
+                    "famili",
+                    "subito",
+                    "uncl",
+                    "new",
+                    "joint"
+                ],
+                "Spam": "true"
+            }
+        },
+            {
+                "mail": {
+                    "From": "farmer@paris.com",
+                    "Date": "2000-09-15",
+                    "Body": [
+                        "pleas",
+                        "practition",
+                        "new",
+                        "marino",
+                        "enrononlin",
+                        "success",
+                        "use"
+                    ],
+                    "Spam": "false"
+                }
+            },
+            {
+                "mail": {
+                    "From": "kitchen@paris.com",
+                    "Date": "2001-12-10",
+                    "Body": [
+                        "use",
+                        "joint",
+                        "success",
+                        "portfolio",
+                        "offic",
+                        "use",
+                        "america",
+                        "tel",
+                        "user"
+                    ],
+                    "Spam": "false"
+                }
+            },
+            {
+                "mail": {
+                    "From": "SA_and_HP@paris.com",
+                    "Date": "2005-07-18",
+                    "Body": [
+                        "guatemala",
+                        "subito",
+                        "postcard",
+                        "famili",
+                        "portfolio",
+                        "electromagnet",
+                        "subito",
+                        "user"
+                    ],
+                    "Spam": "true"
+                }
+            }]
+        with open('mails.json', 'w') as fp:
+            json.dump(new_mails, fp, indent=4)
+
+
     def setUp(self):
-        self.spam_ham_words = ["portfolio", "new", "user", "joint", "popular"]
+        self.create_new_vocab()
+        self.spam_ham_words = ["portfolio", "new", "user", "joint"]
 
-        self.spam_words = {"subito": 2.0267120650169232e-05, "guatemala": 2.0267120650169232e-05,
-                           "electromagnet": 2.0267120650169232e-05,
-                           "postcard": 0.0002837396891023692, "valedictori": 2.0267120650169232e-05}
+        self.spam_words = {"subito": 0.23076923076923078, "guatemala": 0.07692307692307693,
+                           "electromagnet": 0.07692307692307693}
 
-        self.ham_words = {"practition": 5.174537137653037e-05, "marino": 1.0349074275306073e-05,
-                          "highpointtravel": 1.0349074275306073e-05,
-                          "atm": 1.0349074275306073e-05, "alan": 6.209444565183644e-05}
-        ex6()
+        self.ham_words = {"practition": 0.0625, "marino": 0.0625}
+        self.executerTest(ex6, ex6)
         self.emails = {}
         with open("results.json") as json_data:
             self.emails = json.load(json_data)
@@ -184,43 +272,53 @@ class TestExercice6(unittest.TestCase):
         self.ham_dict = {}
         for element in self.principal_keys:
             if ('spam' in element.lower()):
-                self.spam_dict = self.emails[element];
+                self.spam_dict = self.emails[element]
             if ('ham' in element.lower()):
-                self.ham_dict = self.emails[element];
+                self.ham_dict = self.emails[element]
+
 
     def principal_keys_are_in_the_dict(self):
         ham_key = False
         spam_key = False
         for element in self.principal_keys:
-            if (('ham' in element.lower())):
+            if 'ham' in element.lower():
                 ham_key = True
-            if (('spam' in element.lower())):
+            if 'spam' in element.lower():
                 spam_key = True
         return ham_key and spam_key
+
 
     def spam_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
             return False
         spam_keys = self.spam_dict.keys()
         for element in self.spam_ham_words + list(self.spam_words.keys()):
-            if (element not in spam_keys):
+            if element not in spam_keys:
                 return False
         return True
+
 
     def ham_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
             return False
         ham_keys = self.ham_dict.keys()
         for element in self.spam_ham_words + list(self.ham_words.keys()):
-            if (element not in ham_keys):
+            if element not in ham_keys:
                 return False
         return True
+
+
+    def test_principal_keys_are_in_dict(self):
+        self.assertTrue(self.principal_keys_are_in_the_dict())
+
 
     def test_spam_keys_are_in_dict(self):
         self.assertTrue(self.spam_keys_are_in_dict())
 
+
     def test_ham_keys_are_in_dict(self):
         self.assertTrue(self.ham_keys_are_in_dict())
+
 
     def test_spam_keys_should_not_be_in_ham_dict(self):
         if not self.principal_keys_are_in_the_dict():
@@ -234,6 +332,7 @@ class TestExercice6(unittest.TestCase):
                 key_give_0_prop = self.ham_dict[element] == 0
             self.assertTrue(key_give_0_prop or key_not_exist)
 
+
     def test_ham_keys_should_not_be_in_spam_dict(self):
         if not self.principal_keys_are_in_the_dict():
             self.assertTrue(False)
@@ -246,12 +345,14 @@ class TestExercice6(unittest.TestCase):
                 key_give_0_prop = self.spam_dict[element] == 0
             self.assertTrue(key_give_0_prop or key_not_exist)
 
+
     def test_spam_prob_are_correct(self):
         if not self.spam_keys_are_in_dict():
             self.assertTrue(False)
             return
         for element in self.spam_words:
             self.assertAlmostEqual(self.spam_dict[element], self.spam_words[element], places=9)
+
 
     def test_ham_prob_are_correct(self):
         if not self.ham_keys_are_in_dict():
