@@ -5,10 +5,12 @@ import unittest
 import os
 import sys
 import json
+from mock import patch
+
 from exercice1 import exercice1 as ex1
 from exercice2 import exercice2 as ex2
 from exercice3 import exercice3 as ex3
-from exercice4 import exercice4 as ex4
+import exercice4 as ex4
 from exercice5 import multiplierMatrices as ex5
 from exercice6 import createVocabulary as ex6
 
@@ -84,42 +86,61 @@ class TestExercice3(unittest.TestCase):
             h = v * v / (2 * self.CONST_GRAVITE)
             nb_rebonds += 1
         return nb_rebonds
+
+
 class TestExercice4(unittest.TestCase):
-   def test_pie_is_well_aproximed(self):
-        self.assertAlmostEqual(ex4()[0],3.141, delta = 0.001)
+    # 355 / 113 is a good approximation of PI so 355 / 133*4 is a good approx of PI/4
+    IN_CIRCLE = 355 * 2
+    ITERATIONS = 452 * 2
+    counter = 1
+
+    def mockedRandom(self):
+        if self.counter <= self.IN_CIRCLE:
+            value = 0.5  # inside circle
+        else:
+            value = 0.0  # outside circle
+        self.counter += 1
+        return value
+
+    def test_pie_is_well_aproximed(self):
+        with patch('__main__.ex4.random', self.mockedRandom):
+            self.assertAlmostEqual(ex4.exercice4()[0], 3.141, delta=0.001)
 
 
 class TestExercice5(unittest.TestCase):
-   A = ([[1, 2], [1, 5]])
-   B = ([[1, 2], [1, 6], [3, 8]])
-   C = ([[1], [6]])
+    A = ([[1, 2], [1, 5]])
+    B = ([[1, 2], [1, 6], [3, 8]])
+    C = ([[1], [6]])
 
-   def test_multiyply_matrix_with_uncompatible_size_1(self):
+    def test_multiyply_matrix_with_uncompatible_size_1(self):
         isEqual = np.array_equal(ex5(self.A, self.B), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
-   def test_multiyply_matrix_with_uncompatible_size_2(self):
+    def test_multiyply_matrix_with_uncompatible_size_2(self):
         isEqual = np.array_equal(ex5(self.C, self.A), [[0.0, 0.0], [0.0, 0.0]])
         self.assertTrue(isEqual)
 
-   def test_multiyply_matrix_with_compatible_size_1(self):
+    def test_multiyply_matrix_with_compatible_size_1(self):
         isEqual = np.array_equal(ex5(self.B, self.A), [[3, 12], [7, 32], [11, 46]])
         self.assertTrue(isEqual)
 
-   def test_multiyply_matrix_with_compatible_size_2(self):
+    def test_multiyply_matrix_with_compatible_size_2(self):
         isEqual = np.array_equal(ex5(self.A, self.C), [[13], [31]])
         self.assertTrue(isEqual)
 
+
 class TestExercice6(unittest.TestCase):
 
-   def setUp(self):
-        self.spam_ham_words = ["portfolio","new","user","joint", "popular"]
+    def setUp(self):
+        self.spam_ham_words = ["portfolio", "new", "user", "joint", "popular"]
 
-        self.spam_words = {"subito": 2.0267120650169232e-05, "guatemala": 2.0267120650169232e-05, "electromagnet": 2.0267120650169232e-05,
-                     "postcard": 0.0002837396891023692, "valedictori": 2.0267120650169232e-05 }
+        self.spam_words = {"subito": 2.0267120650169232e-05, "guatemala": 2.0267120650169232e-05,
+                           "electromagnet": 2.0267120650169232e-05,
+                           "postcard": 0.0002837396891023692, "valedictori": 2.0267120650169232e-05}
 
-        self.ham_words = {"practition": 5.174537137653037e-05, "marino": 1.0349074275306073e-05, "highpointtravel": 1.0349074275306073e-05,
-                    "atm": 1.0349074275306073e-05, "alan": 6.209444565183644e-05}
+        self.ham_words = {"practition": 5.174537137653037e-05, "marino": 1.0349074275306073e-05,
+                          "highpointtravel": 1.0349074275306073e-05,
+                          "atm": 1.0349074275306073e-05, "alan": 6.209444565183644e-05}
         ex6()
         self.emails = {}
         with open("results.json") as json_data:
@@ -134,7 +155,7 @@ class TestExercice6(unittest.TestCase):
             if ('ham' in element.lower()):
                 self.ham_dict = self.emails[element];
 
-   def principal_keys_are_in_the_dict(self):
+    def principal_keys_are_in_the_dict(self):
         ham_key = False
         spam_key = False
         for element in self.principal_keys:
@@ -144,7 +165,7 @@ class TestExercice6(unittest.TestCase):
                 spam_key = True
         return ham_key and spam_key
 
-   def spam_keys_are_in_dict(self):
+    def spam_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
             return False
         spam_keys = self.spam_dict.keys()
@@ -153,7 +174,7 @@ class TestExercice6(unittest.TestCase):
                 return False
         return True
 
-   def ham_keys_are_in_dict(self):
+    def ham_keys_are_in_dict(self):
         if not self.principal_keys_are_in_the_dict():
             return False
         ham_keys = self.ham_dict.keys()
@@ -162,13 +183,13 @@ class TestExercice6(unittest.TestCase):
                 return False
         return True
 
-   def test_spam_keys_are_in_dict(self):
+    def test_spam_keys_are_in_dict(self):
         self.assertTrue(self.spam_keys_are_in_dict())
 
-   def test_ham_keys_are_in_dict(self):
+    def test_ham_keys_are_in_dict(self):
         self.assertTrue(self.ham_keys_are_in_dict())
 
-   def test_spam_keys_should_not_be_in_ham_dict(self):
+    def test_spam_keys_should_not_be_in_ham_dict(self):
         if not self.principal_keys_are_in_the_dict():
             self.assertTrue(False)
             return
@@ -178,9 +199,9 @@ class TestExercice6(unittest.TestCase):
             key_give_0_prop = False
             if element in ham_keys:
                 key_give_0_prop = self.ham_dict[element] == 0
-            self.assertTrue(key_give_0_prop or key_not_exist )
+            self.assertTrue(key_give_0_prop or key_not_exist)
 
-   def test_ham_keys_should_not_be_in_spam_dict(self):
+    def test_ham_keys_should_not_be_in_spam_dict(self):
         if not self.principal_keys_are_in_the_dict():
             self.assertTrue(False)
             return
@@ -190,21 +211,22 @@ class TestExercice6(unittest.TestCase):
             key_give_0_prop = False
             if element in spam_keys:
                 key_give_0_prop = self.spam_dict[element] == 0
-            self.assertTrue(key_give_0_prop or key_not_exist )
+            self.assertTrue(key_give_0_prop or key_not_exist)
 
-   def test_spam_prob_are_correct(self):
+    def test_spam_prob_are_correct(self):
         if not self.spam_keys_are_in_dict():
             self.assertTrue(False)
             return
         for element in self.spam_words:
             self.assertAlmostEqual(self.spam_dict[element], self.spam_words[element], places=9)
 
-   def test_ham_prob_are_correct(self):
+    def test_ham_prob_are_correct(self):
         if not self.ham_keys_are_in_dict():
             self.assertTrue(False)
             return
         for element in self.ham_words:
             self.assertAlmostEqual(self.ham_dict[element], self.ham_words[element], places=9)
+
 
 if __name__ == '__main__':
     if not os.path.exists('logs'):
