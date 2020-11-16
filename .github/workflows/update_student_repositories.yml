@@ -23,7 +23,7 @@ jobs:
           python3 -m classroom_tools.student_repositories.delete_workflows \
             --token=${{ secrets.REPO_WORKFLOW_PAT }} \
             --org_name="$org_name" \
-            --repo_filter="$repo_filter" \
+            --repo_filter="tp2" \
             --branch="${{ github.event.inputs.branch }}"
 
           python3 -m classroom_tools.student_repositories.sync_with_template_repository \
