@@ -297,9 +297,6 @@ class TestExercice6(unittest.TestCase):
                 return False
         return True
 
-    def test_principal_keys_are_in_dict(self):
-        self.assertTrue(self.principal_keys_are_in_the_dict())
-
     def test_spam_keys_are_in_dict(self):
         self.assertTrue(self.spam_keys_are_in_dict())
 
